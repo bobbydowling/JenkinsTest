@@ -1,10 +1,10 @@
 /* Requires the Docker Pipeline plugin */
 pipeline {
-    agent { docker { image 'node:20.11.1-alpine3.19' } }
+    agent { docker { image 'python:3.13.0a4-windowsservercore-ltsc2022' } }
     stages {
         stage('build') {
             steps {
-                sh 'node --version'
+                sh 'python --version'
             }
         }
     }
